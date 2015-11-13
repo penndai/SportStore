@@ -189,12 +189,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\IRepository.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductDbContext.cs" />
+    <Compile Include="Models\ProductDbInitializer.cs" />
+    <Compile Include="Models\ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-2.1.0.min.map" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Pre\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -204,8 +212,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="Views\Pre\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
