@@ -1,6 +1,12 @@
 ﻿
 @model IEnumerable<SportStore.Models.Product>
 
+<div class="panel panel-primary ">
+    <a href="/pre/signin" class="btn btn-sm btn-primary">Sign In</a>
+    <a href="/pre/signout" class="btn btn-sm btn-primary">Sign Out</a>
+    User: @(HttpContext.Current.User.Identity.Name)
+</div>
+
 <div class="panel panel-primary">
     <div class="panel-heading">Products</div>
     <table class="table table-striped">
@@ -17,13 +23,13 @@
     </table>
 </div>
 
-@using (Html.BeginForm("SaveProduct", "Prep"))
+@using (Html.BeginForm("SaveProduct", "Pre"))
 {
     <input type="hidden" name="Name" value="Zippy Running Shoes" />
     <input type="hidden" name="Category" value="Running" />
     <input type="hidden" name="Description" value="Set a new Record Time" />
     <input type="hidden" name="Price" value="159.99" />
     <button class="btn btn-primary" type="submit">Create</button>
-    <a href="/prep/deleteproduct/2" class="btn btn-primary">Delete</a>
+    <a href="/pre/deleteproduct/2" class="btn btn-primary">Delete</a>
 }
 
